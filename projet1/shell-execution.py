@@ -1,8 +1,10 @@
+#!/usr/bin/env python
+
 import subprocess
 import os
 
 def execute_shell_script(script_name, *args):
-    script_path = os.path.join(os.path.dirname(__file__), script_name)
+    script_path = os.path.join(os.path.dirname(__file__), "Files", script_name)
     command = [script_path, *args]
     try:
         # Utilisation de check_output pour récupérer la sortie du script shell
